@@ -48,7 +48,7 @@ Pour le développement :
 
 Pour les tests :
 
-- [rspec-rails](http://rspec.info/) : bibliothèque de Behaviour-Drive
+- [rspec-rails](http://rspec.info/) : bibliothèque de Behaviour Driven
   Development
 - [factory_girl_rails](https://github.com/thoughtbot/factory_girl) : facilite
   la création de modèles pour les tests
