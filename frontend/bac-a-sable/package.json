@@ -2,6 +2,7 @@
   "name": "bac-a-sable",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sogilis.github.io/bus-factor/frontend/bac-a-sable/build/",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
