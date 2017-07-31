@@ -23,6 +23,7 @@ class App extends Component {
           <div className="component">
             <ComponentPresenter
               component={Button}
+              componentName="Button"
               componentProps={{
                 type: 'primary',
                 onClick: () => alert('Hello, World!'),
@@ -32,6 +33,7 @@ class App extends Component {
 
             <ComponentPresenter
               component={Button}
+              componentName="Button"
               componentProps={{
                 type: 'secondary',
                 onClick: () => alert('Hello, World!'),
@@ -41,6 +43,7 @@ class App extends Component {
 
             <ComponentPresenter
               component={Button}
+              componentName="Button"
               componentProps={{
                 type: 'secondary',
                 onClick: () => alert('Hello, World!'),
@@ -51,6 +54,7 @@ class App extends Component {
 
             <ComponentPresenter
               component={Button}
+              componentName="Button"
               componentProps={{
                 type: 'danger',
                 onClick: () => window.confirm('Êtes-vous sûr ?'),

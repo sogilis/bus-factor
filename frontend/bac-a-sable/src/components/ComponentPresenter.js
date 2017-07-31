@@ -4,7 +4,7 @@ import './ComponentPresenter.css';
 
 class ComponentPresenter extends Component {
   buildTextComponent() {
-    const { component, componentProps: { children, ...otherProps } } = this.props;
+    const { componentName, componentProps: { children, ...otherProps } } = this.props;
     const propsList = Object.entries(otherProps);
     const textProps = propsList.map(([propName, propValue]) => {
       const escapedPropValue = typeof propValue === 'string' ? `"${propValue}"`
@@ -12,7 +12,7 @@ class ComponentPresenter extends Component {
                              : `{${propValue}}`;
       return `  ${propName}=${escapedPropValue}`;
     }).join('\n');
-    return `<${component.name}\n${textProps}\n>\n  ${children}\n</${component.name}>`;
+    return `<${componentName}\n${textProps}\n>\n  ${children}\n</${componentName}>`;
   }
 
   render() {
@@ -33,6 +33,7 @@ class ComponentPresenter extends Component {
 
 ComponentPresenter.propTypes = {
   component: PropTypes.func.isRequired,
+  componentName: PropTypes.string.isRequired,
   componentProps: PropTypes.object.isRequired,
 };
 
