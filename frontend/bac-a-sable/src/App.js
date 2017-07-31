@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from './components/Button';
+import ComponentPresenter from './components/ComponentPresenter';
 import './App.css';
 
 class App extends Component {
@@ -19,19 +20,43 @@ class App extends Component {
             </p>
           </div>
 
-          <div className="container">
-            <div className="component">
-              <h2>Button.js</h2>
-              <Button type="primary" onClick={() => alert('Hello, World!')}>
-                Bouton principal
-              </Button>
-              <Button type="secondary" onClick={() => alert('Hello, World!')}>
-                Bouton secondaire
-              </Button>
-              <Button type="danger" onClick={() => window.confirm('Êtes-vous sûr ?')}>
-                Bouton danger
-              </Button>
-            </div>
+          <div className="component">
+            <ComponentPresenter
+              component={Button}
+              componentProps={{
+                type: 'primary',
+                onClick: () => alert('Hello, World!'),
+                children: 'Bouton principal',
+              }}
+            />
+
+            <ComponentPresenter
+              component={Button}
+              componentProps={{
+                type: 'secondary',
+                onClick: () => alert('Hello, World!'),
+                children: 'Bouton secondaire',
+              }}
+            />
+
+            <ComponentPresenter
+              component={Button}
+              componentProps={{
+                type: 'secondary',
+                onClick: () => alert('Hello, World!'),
+                icon: 'ship',
+                children: 'Bouton avec icône',
+              }}
+            />
+
+            <ComponentPresenter
+              component={Button}
+              componentProps={{
+                type: 'danger',
+                onClick: () => window.confirm('Êtes-vous sûr ?'),
+                children: 'Bouton danger',
+              }}
+            />
           </div>
         </div>
       </div>
