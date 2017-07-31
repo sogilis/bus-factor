@@ -21,6 +21,11 @@ class App extends Component {
           </div>
 
           <div className="component">
+            <div className="container">
+              <h2>Button.js</h2>
+              <a href="https://github.com/sogilis/bus-factor/blob/master/frontend/bac-a-sable/src/components/Button.js">Voir le code JS</a> - <a href="https://github.com/sogilis/bus-factor/blob/master/frontend/bac-a-sable/src/components/Button.css">Voir le code CSS</a>
+            </div>
+
             <ComponentPresenter
               component={Button}
               componentName="Button"
