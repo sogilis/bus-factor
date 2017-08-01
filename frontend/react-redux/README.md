@@ -10,6 +10,11 @@ paquets comme NPM ou Yarn (évitez l'utilisation de https://github.com/reactjs/r
 qui se révèle vite limité). Avec Rails 5, cela devrait être assez facile, avec
 Rails 4 privilégiez une application séparée du backend.
 
+## Redux State Vs Component State
+Une règle simple pour savoir où stocker son état :
+- Donnée persistante (ex: les données d'un utilisateur) -> Redux
+- Donnée éphémère (ex: l'état d'un filtre) -> Component State (à centraliser dans le composant le plus haut de la hiérarchie si cet état doit être partagé entre plusieurs composants)
+
 ## Bibliothèques utiles
 
 - [react](https://facebook.github.io/react/)
