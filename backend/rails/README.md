@@ -28,6 +28,48 @@ conséquent se révéler inutiles.
   gestion simple des jobs asynchrones
 - [paperclip](https://github.com/thoughtbot/paperclip) : gestion des fichiers
 - [haml-rails](http://haml.info/) : markup produisant du HTML
+- [contracts](https://github.com/egonSchiele/contracts.ruby) : Programmation par contrat en ruby
+
+  <details>
+    <summary>Details</summary>
+    Les contrats permettent une programmation beaucoup plus stricte et sécurisante.
+    La syntaxe est simple et permet une grand expressivité dans les conditions nécessaires à la bonne exécution.
+    
+    Les contrats ont un coût à l'exécution mais il est possible de les désactiver en fonction d'une variable d'environnement pour ne pas les avoir en production par exemple: `NO_CONTRACTS`.
+    
+    Une fonctionnalité très intéressante est la possibilité d'avoir du _pattern matching_ au niveau des méthodes et donc de les surcharger en fonction de la valeur des paramètres et des contrats.
+    
+    Par exemple, voici un code classique de factoriel :
+    
+    ```ruby
+    Contract C::Num => C::Num
+    def fact x
+      if x == 1
+        x
+      else
+        x * fact(x - 1)
+      end
+    end
+    ```
+    
+    Il est possible de l'écrire sous forme de deux méthodes au même nom mais avec des contrats différents :
+    
+    ```ruby
+    Contract 1 => 1
+    def fact x
+      x
+    end
+
+    Contract C::Num => C::Num
+    def fact x
+      x * fact(x - 1)
+    end
+    ```
+    
+    A noter que si les contrats sont désactivés le _pattern matching_ reste opérationnel.
+    
+    [Documentation](https://egonschiele.github.io/contracts.ruby/)
+  </details>
 
 Pour le développement :
 
