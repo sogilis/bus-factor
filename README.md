@@ -21,4 +21,5 @@ y en a besoin. Toute contribution est la bienvenue et est vivement encouragée !
 - Frontend
     - [React/Redux](frontend/react-redux)
     - [HTML et (S)CSS](frontend/html-css-scss)
+    - [Typographie](frontend/typographie)
     - [Le bac à sable](frontend/bac-a-sable)
