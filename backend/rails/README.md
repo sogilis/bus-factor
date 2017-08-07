@@ -54,6 +54,37 @@ Pour les tests :
   la création de modèles pour les tests
 - [timecop](https://github.com/travisjeffery/timecop) : facilite les tests
   basés sur le temps
+  
+  <details>
+    <summary>Details</summary>
+  Voici un exemple d'utilisation : imaginons qu'on veuille tester qu’une méthode enregistrait bien DateTime.now dans une colonne en rails. Mais comment tester now ?
+
+  Timecop va permettre de figer le temps et donc de le tester.
+
+  Une autre solution serait de venir modifier DateTime pour que now retourne toujours une valeur précise mais Timecop est plus élégant.
+
+  ```ruby
+  describe ".run!" do
+    let(:task) { FactoryGirl.create :add_repo_with_project }
+    let(:frozen_time) { DateTime.now }
+    before { Timecop.freeze(frozen_time) }
+    after { Timecop.return }
+    subject { task.run! }
+
+    it 'should set the run at date' do
+      expect(subject.run_at.utc_to_i).to eq frozen_time.utc.to_i
+    end
+  end
+  ```
+
+  On en profitera pour jouer avec utc.to_i pour éviter les temps identiques mais vu comme différents :
+
+       -Wed, 30 Nov 2016 11:07:28 +0100
+       +Wed, 30 Nov 2016 10:07:28 UTC +00:00
+
+  Et pour finir `DateTime.now` est figé. On pourrait figer n’importe quel temps (genre `'1 may'.to_date`) mais ainsi à chaque exécution du test le temps varie.
+  </details>
+
 - [json_matchers](https://github.com/thoughtbot/json_matchers) : validation des
   API JSON
 - [faker](https://github.com/stympy/faker/) : génération de "fake data"
