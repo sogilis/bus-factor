@@ -33,9 +33,9 @@ conséquent se révéler inutiles.
   <details>
     <summary>Details</summary>
     Les contrats permettent une programmation beaucoup plus stricte et sécurisante.
-    La syntaxe est simple et permet une grand expressivité dans les conditions nécessaires à la bonne exécution.
+    La syntaxe est simple et permet une grande expressivité dans les conditions nécessaires à la bonne exécution.
     
-    Les contrats ont un coût à l'exécution mais il est possible de les désactiver en fonction d'une variable d'environnement pour ne pas les avoir en production par exemple: `NO_CONTRACTS`.
+    Les contrats ont un coût à l'exécution mais il est possible de les désactiver en fonction d'une variable d'environnement pour ne pas les avoir en production par exemple : `NO_CONTRACTS`.
     
     Une fonctionnalité très intéressante est la possibilité d'avoir du _pattern matching_ au niveau des méthodes et donc de les surcharger en fonction de la valeur des paramètres et des contrats.
     
@@ -66,7 +66,7 @@ conséquent se révéler inutiles.
     end
     ```
     
-    A noter que si les contrats sont désactivés le _pattern matching_ reste opérationnel.
+    À noter que si les contrats sont désactivés le _pattern matching_ reste opérationnel.
     
     [Documentation](https://egonschiele.github.io/contracts.ruby/)
   </details>
