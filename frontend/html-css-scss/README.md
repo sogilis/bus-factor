@@ -148,3 +148,12 @@ d'encapsuler dans des `<div>` ou non, mais c'est souvent les mêmes patterns qui
 blocs et, si ce n'est vraiment pas possible, de bien réfléchir à ce que l'on
 cherche à représenter (une ligne du layout, un élément d'une liste, un bouton
 d'édition à coté de son texte, etc.).
+
+## Ressources
+
+- [Bootstrap](http://getbootstrap.com/)&nbsp;: reste aujourd’hui l’un des
+  frameworks CSS les plus efficaces selon nous
+- [Code Guide](http://codeguide.co/)&nbsp;: conseils pour développer du HTML et
+  du CSS maintenables
+- [7 Rules for Creating Gorgeous UI](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda)&nbsp;:
+  un article présentant quelques conseils (subjectifs) pour créer de belles interfaces
