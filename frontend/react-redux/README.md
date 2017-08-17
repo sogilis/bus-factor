@@ -11,9 +11,19 @@ qui se révèle vite limité). Avec Rails 5, cela devrait être assez facile, av
 Rails 4 privilégiez une application séparée du backend.
 
 ## Redux State Vs Component State
-Une règle simple pour savoir où stocker son état :
-- Donnée persistante (ex: les données d'un utilisateur) -> Redux
-- Donnée éphémère (ex: l'état d'un filtre) -> Component State (à centraliser dans le composant le plus haut de la hiérarchie si cet état doit être partagé entre plusieurs composants)
+
+Il n’existe pas de règle absolue pour savoir si l’on doit stocker les données
+dans le state d’un composant ou dans Redux, tout se décide au cas par cas.
+
+Néanmoins, une première approche basique qui marche plutôt bien est la
+suivante&nbsp;:
+
+- Donnée persistante (ex. les données d'un utilisateur) -> Redux
+- Donnée éphémère (ex. l'état d'un filtre) -> Component State (à centraliser dans le composant le plus haut de la hiérarchie si cet état doit être partagé entre plusieurs composants)
+
+Un avantage de Redux est qu’il fournit un store centralisé accessible de
+n’importe où dans l’arborescence des composants. Néanmoins les mécanismes de
+mise à jour peuvent être laborieux à mettre en place.
 
 ## Bibliothèques utiles
 
