@@ -107,8 +107,32 @@ polices dans laquelle aller piocher. La liste suivante est tirée de l’article
 - [Lato](http://www.google.com/fonts/specimen/Lato)
 - [PT Sans](http://www.google.com/fonts/specimen/PT+Sans)
 
-En vérité le choix va être impacté par le but du site (longs articles à lire ou
-scan rapide) et du type de texte (articles d’actualité, de blog, de la poésie).
+Une autre solution est de se reposer sur les polices dites
+«&nbsp;systèmes&nbsp;», c’est-à-dire d’utiliser la même police que celle
+utilisée par défaut par le système d’exploitation. L’avantage est que
+l’application s’intègrera mieux à l’environnement de votre visiteur. De plus en
+plus de sites utilisent cette méthode, notamment GitHub, Medium ou encore
+Wordpress. Vous pouvez en avoir un article plus détaillé sur [css-tricks](https://css-tricks.com/snippets/css/system-font-stack/)
+par exemple. Et pour le code, voici la version utilisée par Medium et
+Wordpress&nbsp;:
+
+```css
+body {
+  font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen-Sans,
+               Ubuntu,
+               Cantarell,
+               "Helvetica Neue",
+               sans-serif;
+}
+```
+
+En vérité le choix de la police va principalement être impacté par le but du
+site (longs articles à lire ou scan rapide) et du type de texte (articles
+d’actualité, de blog, de la poésie).
 
 Notez que si vous tenez à utiliser une font web (incluse via la règle CSS
 `@font-face`) vos visiteurs feront probablement face au FOUT (Flash Of Unstyled
